@@ -67,12 +67,13 @@ public class Fase2 {
 
             System.out.println("--- RESULTAT DE LA VERIFICACIÓ ---");
             System.out.println("Hash original (missatge.hash): " + hashGuardat);
+            System.out.println();
             System.out.println("Hash del fitxer rebut (" + nomFitxerRebut + "): " + hashRebut);
 
             if (hashRebut.equals(hashGuardat)) {
-                System.out.println("[INTEGRITAT OK] Els hashes coincideixen. El missatge NO ha estat modificat.");
+                System.out.println("Els hashes coincideixen. El missatge NO ha estat modificat.");
             } else {
-                System.out.println("[ALERTA] INTEGRITAT COMPROMESA! Els hashes NO coincideixen. El missatge ha estat alterat!");
+                System.out.println("INTEGRITAT COMPROMESA! Els hashes NO coincideixen. El missatge ha estat alterat!");
             }
 
         } catch (IOException e) {
